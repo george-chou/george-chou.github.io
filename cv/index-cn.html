@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="CN">
+ 
+<head>
+    <title>个人简历</title>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="欢迎浏览周墨南的简历">
+    <meta name="author" content="George">    
+    <link rel="shortcut icon" href="assets/images/cv.ico"> 
+     
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/github-activity/css/github-activity-0.1.1.min.css">
+    <link rel="stylesheet" href="assets/plugins/github-activity/css/octicons.min.css">    
+    <link rel="stylesheet" href="assets/css/perfundo.with-icons.css">
+    <link rel="stylesheet" href="assets/plugins/visitormap/css/flag-icon.css">
+    <link rel="stylesheet" href="assets/plugins/visitormap/css/devices.css">  
+    <link rel="stylesheet" href="assets/plugins/visitormap/css/media.css">   
+    <link rel="stylesheet" href="assets/css/styles.css">
+   
+    <script type="text/javascript" src="assets/js/require.js"></script>
+    <script type="text/javascript" src="assets/js/config.js"></script>
+    <script type="text/javascript" src="assets/js/skillset.js"></script>
+    <script type="text/javascript" src="assets/js/codemusic.js"></script>
+    <script type="text/javascript" src="assets/js/visitormap.js"></script>
+    <script type="text/javascript" src="assets/js/perfundo.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</head> 
+
+<body>
+
+<div class="unsupported-browser">
+  <div class="p-responsive">
+      <div class="mr-2">
+          <h5>请注意我的简历已不再兼容Adblock和旧版IE浏览器。</h5>
+          <p>建议更新至最新版的<a href="https://www.apple.com/safari/">Safari</a>、<a href="https://chrome.google.com">Google Chrome</a>或<a href="https://mozilla.org/firefox/">Firefox</a>浏览器。</p>
+      </div>
+  </div>
+</div>
+
+    <header class="header">
+        <div class="container">                       
+            <img class="profile-image img-responsive pull-left" src="assets/images/me.png" alt="George Chou" />
+            <div class="profile-content pull-left">
+                <h1 class="name">周墨南</h1>
+                <h2 class="desc">软件工程师</h2>   
+                <ul class="social list-inline">
+                    <li><a href="https://www.facebook.com/chou.george.900" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://github.com/george-chou" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                    <li><a href="https://space.bilibili.com/30620472" target="_blank"><i class="fa fa-video-camera"></i></a></li>
+                    <li class="last-item"><a href="https://steamcommunity.com/id/30620472/" target="_blank"><i class="fa fa-steam"></i></a></li>
+                </ul> 
+            </div><!--//profile-->
+            <a class="btn btn-cta-secondary pull-right" style="margin-left:5px;" href="./index.html">English</a>
+            <a class="btn btn-cta-primary pull-right" href="mailto:georgechou21@gmail.com"><i class="fa fa-paper-plane"></i> 联系我</a>              
+        </div><!--//container-->
+    </header><!--//header-->
+    
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">关于我</h2>
+                        <div class="content">
+                            <p>我对算法实现与计算机数值模拟很感兴趣，对利用数理知识解决实际问题抱有极大热情，有较好的数学基础及解决问题的能力。热衷于软件开发，并在GitHub上有自己的作品集。同时我也是个爱好广泛的人，兴趣涉猎小提琴、钢琴、电子音乐合成、素描、魔方、游戏开发和昆虫标本制作等。</p>
+                         
+                        </div><!--//content-->
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+    
+               <section class="latest section">
+                    <div class="section-inner">
+                        <h2 class="heading">近期作品</h2>
+                        <div class="content">    
+                                               
+                            <div class="item featured text-center">
+                                <h3 class="title"><a href="https://github.com/george-chou/Snaqe/blob/master/README.md" target="_blank">Snaqe - 贪吃蛇AI</a></h3>
+                                <p class="summary">Qt上开发的集成了基于A*算法AI的经典贪吃蛇游戏——Snaqe</p>
+                                <div class="featured-image">
+                                    <a class="perfundo__link" href="#perfundo-single2">
+                                    <img class="img-responsive project-image" src="assets/images/projects/project-0.png" alt="project name" />
+                                    </a>
+                                    <div class="ribbon">
+                                        <div class="text">最近更新</div>
+                                        </div>
+                                    </div>
+                                    
+                                <div class="desc text-left">                                    
+                                    <p>贪吃蛇已成为一类电子游戏概念。我正在做的事情是让计算机去代替人来玩贪吃蛇游戏并吃满全屏。不过在此之前，我先要开发一款游戏本体，再把AI集成进去。</p>
+                                    <p>蛇自动搜寻食物所用的算法是基于A*算法的，此算法在蛇身不是很长的时候比较好用。然而，随着蛇身的不断增长，它的缺陷便逐渐显露出来了。那便是蛇在拐弯爬行会留下很多空洞，使其不得不浪费大量时间去绕路填补。为避免此现象，我修改了AI的决策：让蛇在长度小于某个阈值时调用A*算法，反之则调用搜寻Hamilton通路算法。虽然这次效果有所改善，但仍然会出现蛇陷入死循环的情形，因此我还在调试它。</p>
+                                </div><!--//desc-->         
+                                <a class="btn btn-cta-secondary" href="https://github.com/george-chou/Snaqe" target="_blank"><i class="fa fa-thumbs-o-up"></i> 回到我的项目</a>                 
+                            </div><!--//item-->
+                            <hr class="divider" />
+                            
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-1.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/QPoisson/blob/master/README.md" target="_blank">QPoisson - 泊松融合图像编辑器</a></h3>
+                                    <p>QPoisson不单单是一款用于实现如镜像、旋转、反色、灰度等常规图像变换的图片编辑器，还是一个实现泊松融合算法的载体。它可以将一幅图上的片段无缝拼接到另一幅较大的图片中。</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/QPoisson" target="_blank"><i class="fa fa-external-link"></i> 在GitHub上查看</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->  
+                            
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-2.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/FluidS/blob/master/README.md" target="_blank">FluidS - 流体模拟器</a></h3>
+                                    <p> 其用于模拟进程的核心算法参考了Robert Bridson编写的Fluid Simulation for Computer Graphics中的内容：使用纳维-斯托克斯方程作为物理模型，实时计算得到的数值解便是标量场及速度场的分布情况，并显示在OpenGL控件中。用户有64x64和128x128两种分辨率以及7种颜色选项可供选择。</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/FluidS" target="_blank"><i class="fa fa-external-link"></i> 在GitHub上查看</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->   
+                                                     
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-3.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/Sharer" target="_blank">Sharer 与 QSharer - WiFi热点共享软件</a></h3>
+                                    <p> Sharer在VB.NET框架下设计的界面，是一款可将装有可共享无线网卡的Windows笔记本变身成WiFi发射器的软件。而QSharer相当于用C++开发的被移植到Qt框架下的Sharer。Sharer中含有一个网速监控器，可实时计算上传及下载速率；而QSharer不含监控器，但却集成了OUI列表：当有新设备连入WiFi时，可根据其MAC地址解析出设备厂商。标题可链接到Sharer的GitHub页面，而下方的链接可跳转到QSharer页面。</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/QSharer" target="_blank"><i class="fa fa-external-link"></i> 在GitHub上查看</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-4.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/CryptShoke/blob/master/README.md" target="_blank">地穴奇兵 - 3D射击游戏</a></h3>
+                                    <p> 这是一款在Unity上开发的单机版3D射击游戏：我们的主人公被困在神秘的地穴之中。这是一个混杂魔兽与机器、远古与未来的世界观。我们的主人公单枪匹马面对形形色色的敌人，他将何去何从？角色与场景的半成品模型下载于游戏蛮牛，动作脚本用C#编写。</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/CryptShoke" target="_blank"><i class="fa fa-external-link"></i> 在GitHub上查看</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-5.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/mathmusic_macro/blob/master/README.md" target="_blank">数字音乐宏包 - 作曲代码简化工具</a></h3>
+                                    <p> 在Mathematica上合成电子音乐时，由于平台的声音模块中编曲的输入结构较为复杂，作曲者不得不键入大量代码才能将乐谱转成MIDI音频。传统的音乐合成方式包含大量重复的代码结构和特殊音效上的功能缺陷，因此为解决这些问题，我开发了这款宏包。</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/mathmusic_macro" target="_blank"><i class="fa fa-external-link"></i> 在GitHub上查看</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                
+                
+                <section class="projects section">
+                    <div class="section-inner">
+                        <h2 class="heading">项目经历</h2>
+                        <div class="content">
+                        
+                        	<div class="item">
+                                <h3 class="title"><a href="https://github.com/george-chou/CRROG" target="_blank">悉尼大学ELEC5619课程项目</a> (2019.8 至 2019.11)</h3>
+                                <p class="summary"><br>成果：作为项目组长在一个学期内带领团队完成项目Proposal、代码、用户手册编写、Presentation以及Demo视频制作，团队的项目代码最终获得HD高分，提升了编程能力、文档编写能力以及团队合作能力。<br><br>介绍：项目名称为“个性化实时简历在线生成器”，是一款致力于为悉尼大学学生模拟公司招聘与求职的服务平台；项目有三类用户：管理员、企业级用户和求职者用户，其中求职者可以为自身设计动态的网页简历，企业级用户可以搜索、浏览以及标记求职者的简历、管理员可以审核与封禁用户；项目后台基于Java-SpringMVC框架编写。</p>
+                                <p><a class="more-link" href="https://github.com/george-chou/CRROG/blob/master/README.md" target="_blank"><i class="fa fa-external-link"></i>更多</a></p>
+                            </div><!--//item-->
+                        
+                            <div class="item">
+                                <h3 class="title"><a href="http://www.hollysys.com/content/details68_1331.html" target="_blank">CTCS2-200H 车载设备技术改进项目</a> (2018.7 至 2019.3)</h3>
+                                <p class="summary"><br>成果：半年内提交11份下位机软件变更及发布、1份下位机软件配置变更、2份工具软件变更、2份新开发工具软件发布以及1份重要文档变更；熟悉了大公司的管理流程，提升了编程能力、文档编写能力以及团队合作能力。<br><br>介绍：嵌入式软件、支持类工具软件开发以及CTCS2-200H系列车型自动安全保护系统的维护；项目共2人承担：系统工程师1人、软件工程师1人。我作为软件工程师，主要职责有：变更规格文档编写、代码及代码对比表编写、自测试及自测试报告编写、参数说明书更新、软件版本配置表更新以及用户操作手册更新等。</p>
+                                <p><a class="more-link" href="http://www.hollysys.com/content/details68_1331.html" target="_blank"><i class="fa fa-external-link"></i> 更多</a></p>
+                            </div><!--//item-->
+                            
+                            <div class="item">
+                                <h3 class="title"><a href="http://www.hollysys.com/content/details33_375.html" target="_blank">ETCS 车载设备开发项目</a> (2018.4 至 2018.7)</h3>
+                                <p class="summary"><br>成果：在不到3个月之内理解了上百页的英文算法需求规格并且在算法原理汇报会议上清晰地做了讲解工作，为后续E2欧洲铁路车载系统软件的开发奠定量坚实的理论基础。<br><br>介绍：欧洲铁路车载系统设计需求对标工作；项目共2人承担：系统工程师1人、算法工程师1人。我作为算法工程师，主要负责E2欧洲铁路车载系统软件标准基线中动态模式曲线算法的梳理工作。</p>
+                                <p><a class="more-link" href="http://www.hollysys.com/content/details33_375.html" target="_blank"><i class="fa fa-external-link"></i>更多</a></p>
+                            </div>
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                
+                <section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">工作经历</h2>
+                        <div class="content">
+                              <div class="item">
+                                <h3 class="title">嵌入式软件工程师 - <span class="place"><a href="http://www.hollysys.com/index.html" target="_blank">北京和利时系统工程有限公司</a></span> <span class="year"> (2018.4 至 2019.4)</span></h3>
+                                <p>负责CTCS2列控车载设备系统功能模块的设计及实现；负责CTCS2列控车载设备系统软件的单元测试、静态分析、集成测试；负责CTCS2列控车载设备系统软件的问题分析及维护；负责CTCS2列控车载设备系统工具软件的开发及维护。</p>
+                            </div><!--//item-->
+                            
+                            <div class="item">
+                                <h3 class="title">Web开发工程师 - <span class="place"><a href="http://www.dongyejituan.com/" target="_blank">辽宁东野实业集团</a></span> <span class="year">(2016.8 至 2018.4)</span></h3>
+                                <p>负责公司网页前端设计、后端搭建与维护，无纸化办公建设及管理。</p>
+                            </div><!--//item-->
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                <section class="github section">
+                    <div class="section-inner">
+                        <h2 class="heading">我的GitHub</h2>
+                        <p>以下是我的GitHub工作流。</p>
+                        <!--//Usage: http://george-chou.com/projects/github-activity/ -->                       
+                        <div id="ghfeed" class="ghfeed">
+                        </div><!--//ghfeed-->
+                        
+                    </div><!--//secton-inner-->
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                
+                <aside class="skills aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">编程能力</h2>
+                        <div class="content">
+                            <p class="intro">编程语言使用频率从0%(从未)到100%(总是)：</p>
+                            <div class="skillset"></div>            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//section-->
+                
+                <aside class="testimonials aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">网页作品</h2>
+                        <div class="content">
+                        	<div class="item">
+                            	<blockquote class="quote">
+                                	<p><a class="more-link" href="http://2013.igem.org/Team:USTC-Software" target="_blank"><i class="fa fa-external-link"></i> USTC-Software</a></p>
+                                	<p>国际基因工程机器大赛团队项目介绍用Wiki</p>
+                                    </blockquote>
+                            </div>
+                            
+                            <div class="item">
+                            	<blockquote class="quote">
+                                	<p><a class="more-link" href="https://george-chou.github.io/envelope" target="_blank"><i class="fa fa-external-link"></i> Envelope</a></p>
+                                	<p>纯前端情人节表白代码</p>
+                                </blockquote>
+                                </div>
+                                
+                                <div class="item">
+                            	<blockquote class="quote">
+                                	<p><a class="more-link" href="https://george-chou.github.io/specimen/index.html" target="_blank"><i class="fa fa-external-link"></i> Cicada</a></p>
+                                	<p>水晶滴胶蝉类标本集</p>
+                                </blockquote>
+                                </div>
+                                
+                                <div class="item">
+                            	<blockquote class="quote">
+                                	<p><a class="more-link" href="https://george-chou.github.io/wordlink" target="_blank"><i class="fa fa-external-link"></i> wordLink</a></p>
+                                	<p>英语词汇测试</p>
+                                </blockquote>
+                                </div>
+                            
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">学历</h2>
+                        <div class="content">
+                        	<div class="item">                      
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> 硕士在读 <a href="https://sydney.edu.au/courses/courses/pc/master-of-engineering-software.html" target="_blank" style="color: inherit !important;">软件工程</a></h3>
+                                <h4 class="university"><a href="https://sydney.edu.au/about-us.html" target="_blank" style="color:inherit !important;">悉尼大学 </a> <span class="year">(2019.8 至 2020.7)</span></h4>
+                            </div><!--//item-->
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> 理学学士 <a href="http://math.ustc.edu.cn/2012/0928/c18703a393363/page.htm" target="_blank" style="color:inherit !important;">信息与计算科学</a></h3>
+                                <h4 class="university"><a href="https://www.ustc.edu.cn/2072/list.htm" target="_blank" style="color:inherit !important;">中国科学技术大学 </a> <span class="year">(2012.9 至 2016.7)</span></h4>
+                            </div>
+                            
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                            
+                <aside class="languages aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">语言能力</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li class="item">
+                                    <span class="title"><strong>汉语:</strong></span>
+                                    <span class="level">母语 <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>英语:</strong></span>
+                                    <span class="level">熟练 <br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i></span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>日语:</strong></span>
+                                    <span class="level">基础 <br class="visible-xs"/><i class="fa fa-star"></i></span>
+                                </li><!--//item-->
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside>
+                
+                <aside class="list music aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">最近在听</h2>
+                        <div class="content">
+                            <ul class="list-unstyled"></ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                <aside class="list conferences aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">学术会议</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-calendar"></i> <a href="http://2013.igem.org/World_Championship_Jamboree" target="_blank">iGEM 2013</a> (麻省理工学院, 波士顿)</li>
+                                <li><i class="fa fa-calendar"></i> <a href="http://2013.igem.org/Jamborees-Asia" target="_blank">iGEM 2013 Asia</a> (<a href="http://translate.itsc.cuhk.edu.hk/uniTS/www.cuhk.edu.hk/chinese/aboutus/university-intro.html" target="_blank" style="color:inherit !important;">香港中文大学</a>, 香港)</li>
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">获得证书</h2>
+                        <div class="content">
+                        
+                        	<div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 最具潜力新员工奖</h3>
+                                <h4 class="university"><a href="http://www.hollysys.com/about/about.html" target="_blank" style="color:inherit !important;">北京和利时系统工程有限公司 </a> <span class="year">2019.01</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 优秀员工奖</h3>
+                                <h4 class="university"><a href="http://www.dongyejituan.com/nav/2.html" target="_blank" style="color:inherit !important;">辽宁东野环保产业开发有限公司 </a> <span class="year">2017.12</span></h4>
+                            </div><!--//item-->
+
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 优先接收通知书</h3>
+                                <h4 class="university"><a href="http://www.amss.cas.cn/dwgk/jgjj/" target="_blank" style="color:inherit !important;">中国科学院数学与系统科学研究院 </a> <span class="year">2015.06</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> iGEM世界锦标赛金牌</h3>
+                                <h4 class="university"><a href="http://2013.igem.org/World_Championship_Jamboree" target="_blank" style="color:inherit !important;">麻省理工学院 </a> <span class="year">2013.11</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> iGEM亚洲锦标赛金牌</h3>
+                                <h4 class="university"><a href="http://2013.igem.org/Jamborees-Asia" target="_blank" style="color:inherit !important;">香港中文大学 </a> <span class="year">2013.10</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 大学英语四级证书</h3>
+                                <h4 class="university"><a href="http://cet.neea.edu.cn/html1/folder/19081/5123-1.htm" target="_blank" style="color:inherit !important;">全国大学英语四六级考试委员会 </a> <span class="year">2013.06</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 安徽省首届动植物标本大赛二等奖</h3>
+                                <h4 class="university"><a href="https://biox.ustc.edu.cn/2013/1023/c669a4651/page.htm" target="_blank" style="color:inherit !important;">中国科学技术大学生命科学学院 </a> <span class="year">2012.12</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 优秀学生奖学金铜奖</h3>
+                                <h4 class="university"><a href="https://www.ustc.edu.cn/2072/list.htm" target="_blank" style="color:inherit !important;">中国科学技术大学 </a> <span class="year">2012.11</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 全国高中数学联赛一等奖</h3>
+                                <h4 class="university"><a href="http://www.cms.org.cn/about_1.html" target="_blank" style="color:inherit !important;">中国数学会 </a> <span class="year">2011.11</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 全国高中生化学竞赛三等奖</h3>
+                                <h4 class="university"><a href="http://www.chemsoc.org.cn/about/" target="_blank" style="color:inherit !important;">中国化学会 </a> <span class="year">2011.10</span></h4>
+                            </div><!--//item-->
+                            
+                        	<div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> 小提琴十级证书</h3>
+                                <h4 class="university"><a href="http://www.chnmusic.org/CmaInfo.html" target="_blank" style="color:inherit !important;">中国音乐家协会音乐考级委员会</a> <span class="year">2006.08</span></h4>
+                            </div><!--//item-->
+                        
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+              
+                <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">访客统计</h2>
+                        <div id="chartdiv"></div>
+                        
+                        <table class="vl">
+                        	<tr class="tbhead">
+                        		<td>最近访客 (累计：<span></span>)</td><td>浏览器</td><td>操作系统</td>
+                        	</tr>
+                        </table>
+                        
+                    </div>
+                </aside>
+              
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+    
+    <div class="returnTop"><span class="s"></span><span class="b"></span></div>
+    <div class="qrCode"></div>
+    <span id="qr"><img src="assets/images/qrcode/qrc.png" /><h5>扫码至移动端查看</h5></span>
+    
+    <div id="perfundo-single2" class="perfundo__overlay fadeIn">
+    	<figure class="perfundo__content perfundo__figure">
+        	<div class="perfundo__image"></div>
+        		<figcaption class="perfundo__figcaption">
+                	<p class="perfundo__caption"></p>
+                </figcaption>
+       </figure>
+       <a href="#perfundo-none" class="perfundo__close perfundo__control">Close</a>
+	</div>   
+             
+</body>
+</html> 
+

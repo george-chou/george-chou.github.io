@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Resume</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Monan Zhou's Page of CV">
+    <meta name="author" content="George">    
+    <link rel="shortcut icon" href="assets/images/cv.ico">
+    
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/github-activity/css/github-activity-0.1.1.min.css">
+    <link rel="stylesheet" href="assets/plugins/github-activity/css/octicons.min.css">    
+    <link rel="stylesheet" href="assets/css/perfundo.with-icons.css">
+    <link rel="stylesheet" href="assets/plugins/visitormap/css/flag-icon.css">
+    <link rel="stylesheet" href="assets/plugins/visitormap/css/devices.css">  
+    <link rel="stylesheet" href="assets/plugins/visitormap/css/media.css">   
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <script type="text/javascript" src="assets/js/require.js"></script>
+    <script type="text/javascript" src="assets/js/config.js"></script>
+    <script type="text/javascript" src="assets/js/skillset.js"></script>
+    <script type="text/javascript" src="assets/js/codemusic.js"></script>
+    <script type="text/javascript" src="assets/js/visitormap.js"></script>
+    <script type="text/javascript" src="assets/js/perfundo.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</head>
+
+<body>
+
+<div class="unsupported-browser">
+  <div class="p-responsive">
+      <div class="mr-2">
+          <h5>Please note that my CV no longer supports Adblock or old versions of IE Browser.</h5>
+          <p>I recommend upgrading to the latest <a href="https://www.apple.com/safari/">Safari</a>, <a href="https://chrome.google.com">Google Chrome</a>, or <a href="https://mozilla.org/firefox/">Firefox</a>.</p>
+      </div>
+  </div>
+</div>
+
+	<!-- ******HEADER****** --> 
+    <header class="header">
+        <div class="container">                       
+            <img class="profile-image img-responsive pull-left" src="assets/images/me.png" alt="George Chou" />
+            <div class="profile-content pull-left">
+                <h1 class="name">Monan Zhou</h1>
+                <h2 class="desc">Software Engineer</h2>   
+                <ul class="social list-inline">
+                    <li><a href="https://www.facebook.com/chou.george.900" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://github.com/george-chou" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                    <li><a href="https://space.bilibili.com/30620472" target="_blank"><i class="fa fa-video-camera"></i></a></li>
+                    <li class="last-item"><a href="https://steamcommunity.com/id/30620472/" target="_blank"><i class="fa fa-steam"></i></a></li>
+                </ul> 
+            </div><!--//profile-->
+            <a class="btn btn-cta-secondary pull-right" style="margin-left:5px;" href="./index-cn.html">中文</a>
+            <a class="btn btn-cta-primary pull-right" href="mailto:georgechou21@gmail.com"><i class="fa fa-paper-plane"></i> Contact Me</a>              
+        </div><!--//container-->
+    </header><!--//header-->
+    
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>With an outgoing character, this guy has strong planning skill, organizing ability, hands-on ability, teamwork spirit and ability of quickly adapting to different environments. As an amiable person with good expression ability, this guy can keep active thoughts, innovative mind and stress tolerance faced with difficulties. With rigorous logical thinking and creative awareness, this guy is good at communicating with people and full of passion in the study and work.</p>
+         
+        <p>This guy is also skilled in algorithm implementation and computational simulation. With solid mathematic basis and great problem-solving ability, this guy is keen on software development and have a portfolio on GitHub. This guy has varied tastes involving playing the violin, playing the piano, digital music composition, pencil sketch, Rubik cube, game development, insect specimen making, and so on.</p>
+                         
+                        </div><!--//content-->
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+    
+               <section class="latest section">
+                    <div class="section-inner">
+                        <h2 class="heading">Latest Folios</h2>
+                        <div class="content">    
+                                               
+                            <div class="item featured text-center">
+                                <h3 class="title"><a href="https://github.com/george-chou/Snaqe/blob/master/README.md" target="_blank">Snaqe - Snake AI</a></h3>
+                                <p class="summary">This is the classic game Gluttonous Snake played by A-star algorithm and developed in Qt framework, how about calling it "Snaqe"?</p>
+                                <div class="featured-image">
+                                    <a class="perfundo__link" href="#perfundo-single2">
+                                    <img class="img-responsive project-image" src="assets/images/projects/project-0.png" alt="project name" />
+                                    </a>
+                                    <div class="ribbon">
+                                        <div class="text">New</div>
+                                        </div>
+                                    </div>
+                                    
+                                <div class="desc text-left">                                    
+                                    <p>The Snake has become a game ideology. My purpose is to let the computer replace people to pass the game. Before that, I had coded a Snake game first. Then I embedded the AI into it.</p>
+                                    <p>The path searching algorithm for our snake is the A-star algorithm, and it could work well when the snake length was not too long. However, as the snake length grew, it would generate so many holes on the game map. Filling these holes by the snake would take a lot of time. Therefore, I modified the AI decision: call the A-star algorithm when snake length is less than a threshold, elsewhere follow Hamilton path. It worked better but still caused the snake to trap into a death loop sometimes, so I am still working on it.</p>
+                                </div><!--//desc-->         
+                                <a class="btn btn-cta-secondary" href="https://github.com/george-chou/Snaqe" target="_blank"><i class="fa fa-thumbs-o-up"></i> Back my project</a>                 
+                            </div><!--//item-->
+                            <hr class="divider" />
+                            
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-1.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/QPoisson/blob/master/README.md" target="_blank">QPoisson - Photo Editor with Poisson Blending</a></h3>
+                                    <p>The 'QPoisson' is not just a photo editor capable of ordinary transformations in image processing, such as mirroring, rotation, color inverse, turning into greyscale, etc., but a carrier for implementing Poisson blending algorithm. That is to cut a fragment, which is smaller than the aim picture, from the source picture, and then seamlessly blend it into the aim picture.</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/QPoisson" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->  
+                            
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-2.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/FluidS/blob/master/README.md" target="_blank">FluidS - Fluid Simulator</a></h3>
+                                    <p>Its core algorithm of the simulation process refers to Robert Bridson's <i>Fluid Simulation for Computer Graphics</i>. It uses the numerical solution of Navier-Stokes equations to predict the density and velocity distribution of particles in each frame displayed in the OpenGL widget of Qt. There are two resolution options for users: 64x64 and 128x128. Users can also change display mode between density and velocity in 7 colors.</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/FluidS" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->                            
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-3.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/Sharer" target="_blank">Sharer & QSharer - Wifi Hotspot Creator</a></h3>
+                                    <p>Sharer is software with UI developed in VB.NET. It is designed by me to create WiFi hotspots for Windows PCs with Hosted Network capable wireless adapters. While QSharer is the Qt version of Sharer transplanted into C++. Sharer has a net monitor showing the current network speed, while QSharer uniquely integrates an OUI list. You can reach the GitHub page of Sharer by clicking the title, while the below path links to the QSharer page.</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/QSharer" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-4.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/CryptShoke/blob/master/README.md" target="_blank">CryptShoke - 3D Shooting Game</a></h3>
+                                    <p>It is a 3D TPS single-player game developed on Unity, in which our protagonist crosses into a crypt. Here is a hodgepodge of the world with trolls and robots, ancient and come. Faced with all sorts of enemies, how could he escape the maze with only a single gun? Let us see what he will get! The raw open-source models of characters and scenes were from manew.com, and action scripts were in C#.</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/CryptShoke" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            
+                            <div class="item row">
+                                <a class="col-md-4 col-sm-4 col-xs-12 perfundo__link" href="#perfundo-single2">
+                                <img class="img-responsive project-image" src="assets/images/projects/project-5.png" alt="project name" />
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                    <h3 class="title"><a href="https://github.com/george-chou/mathmusic_macro/blob/master/README.md" target="_blank">Mathmusic macro - Composition Macro for Mathematica</a></h3>
+                                    <p>While making music compositions on <i>Mathematica</i>, composers have to type a large number of codes due to unfriendly input constructions of the platform in the sound module. The conventional composition code contains so many duplicate assemblies and functional flaws in creating unique sound effects. Therefore, I aim to address this problem to improve the efficiency of musical composing on <i>Mathematica</i>.</p>
+                                    <p><a class="more-link" href="https://github.com/george-chou/mathmusic_macro" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
+                                </div><!--//desc-->                          
+                            </div><!--//item-->
+                            
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                
+                
+                <section class="projects section">
+                    <div class="section-inner">
+                        <h2 class="heading">Practical Projects</h2>
+                        <div class="content">
+                        
+                        	<div class="item">
+                                <h3 class="title"><a href="https://github.com/george-chou/CRROG" target="_blank">ELEC5619 Course Project at University of Sydney</a> (2019.8 - 2019.11)</h3>
+                                <p class="summary"><br>Achievements: as the project leader, I led the team to complete the project proposal, code, user manual, presentation, and demo video production in a semester. The team's project code finally got an HD, and this experience improved my programming ability, document writing ability, and team cooperation.<br><br>Introduction: the project is called Customised Real-time Resume Online Generator. It is a service platform dedicated to recruiting and applying for a job for the students of the University of Sydney while modeling job platform. The project has three types of users: administrators, enterprise-level users, and job-seekers. Job seekers can design dynamic web resumes for themselves; enterprise-level users can search, browse, and mark job seekers' resumes. While administrators can review and ban all other users. The project backends are written based on the SpringMVC framework in Java.</p>
+                                <p><a class="more-link" href="https://github.com/george-chou/CRROG/blob/master/README.md" target="_blank"><i class="fa fa-external-link"></i>Find out more</a></p>
+                            </div><!--//item-->
+                        
+                            <div class="item">
+                                <h3 class="title"><a href="http://hollysys.com.sg/train-operation-control-system/onboard-train-control-system/" target="_blank">CTCS2-200H Train-borne Equipment Technology Improvement</a> (2018.7 - 2019.3)</h3>
+                                <p class="summary"><br>Achievements: having finished 11 variation orders, 11 launch orders and one configuration archive of slave computer software, two variation orders of utility software, two kinds of newly developed utility software and one change record of a pure document within half a year, getting familiar with management workflow at big companies and having improved my abilities in programming, document compilation, and teamwork.<br><br>Introduction: embedded software and supporting utility software development and maintenance of CTCS2-200H series vehicle model automatic safety protection system; two staffs undertake the project: 1 system engineer and one software engineer. As the software engineer, I was responsible for code writing, self-testing, alteration specification, self-testing report, and alteration of such documents as code difference comparison table, version configuration table, parameter specification, and user manual.</p>
+                                <p><a class="more-link" href="http://hollysys.com.sg/train-operation-control-system/onboard-train-control-system/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                            </div><!--//item-->
+                            
+                            <div class="item">
+                                <h3 class="title"><a href="http://hollysys.com.sg/train-operation-control-system/onboard-train-control-system/" target="_blank">ETCS Train-borne Equipment Development</a> (2018.4 - 2018.7)</h3>
+                                <p class="summary"><br>Achievements: having understood more than 100 pages of algorithms in English in less than three months and narrated them clearly in the report-back meeting of algorithm principles, laying a solid foundation for the subsequent E2 development.<br><br>Introduction: standard train-borne demand of European railways; two staffs undertook the project: 1 system engineer and one algorithm engineer. As the algorithm engineer, I was responsible for the curve calculation algorithm research of the dynamic mode of E2 European standard baseline version 3 vehicle equipment.</p>
+                                <p><a class="more-link" href="http://hollysys.com.sg/train-operation-control-system/onboard-train-control-system/" target="_blank"><i class="fa fa-external-link"></i>Find out more</a></p>
+                            </div><!--//item-->
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                
+                <section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                              <div class="item">
+                                <h3 class="title">Embedded Software Engineer - <span class="place"><a href="https://www.hollysys.com.sg/" target="_blank">Beijing HollySys Co., Ltd.</a></span> <span class="year"> (2018.4 - 2019.4)</span></h3>
+                                <p>Design and achievement of function module of CTCS2 train-borne equipment system; Unit test, static analysis, and integration testing of CTCS2 train-borne equipment system software; Problem analysis and maintenance of CTCS2 train-borne equipment system software; Development and maintenance of CTCS2 train-borne equipment system utility software;</p>
+                            </div><!--//item-->
+                            
+                            <div class="item">
+                                <h3 class="title">Web Developer - <span class="place"><a href="http://www.dongyejituan.com/" target="_blank">Liaoning Dongye Industry Co.,Ltd.</a></span> <span class="year">(2016.8 - 2018.4)</span></h3>
+                                <p>Front-end design, backstage construction and maintenance of company website, and corporate paperless development and management;</p>
+                            </div><!--//item-->
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                <section class="github section">
+                    <div class="section-inner">
+                        <h2 class="heading">My GitHub</h2>
+                        <p>Here are my GitHub activities.</p>        
+                        <!--//Usage: http://george-chou.com/projects/github-activity/ -->                       
+                        <div id="ghfeed" class="ghfeed">
+                        </div><!--//ghfeed-->
+                        
+                    </div><!--//secton-inner-->
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                
+                <aside class="skills aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Programming</h2>
+                        <div class="content">
+                            <p class="intro">Usage frequency of language from 0% (Never) to 100% (Always):</p>
+                            <div class="skillset"></div>         
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//section-->
+                
+                <aside class="testimonials aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Webs</h2>
+                        <div class="content">
+                        	<div class="item">
+                            	<blockquote class="quote">
+                                	<p><a class="more-link" href="http://2013.igem.org/Team:USTC-Software" target="_blank"><i class="fa fa-external-link"></i> USTC-Software</a></p>
+                                	<p>Wiki for the introduction of the team project in iGEM competition;</p>
+                                    </blockquote>
+                            </div>
+                            
+                            <div class="item">
+                            	<blockquote class="quote">
+                                	<p><a class="more-link" href="https://george-chou.github.io/envelope" target="_blank"><i class="fa fa-external-link"></i> Envelope</a></p>
+                                	<p>Pure front-end Valentine's Day love confession code;</p>
+                                </blockquote>
+                                </div>
+                                
+                                <div class="item">
+                            	<blockquote class="quote">
+                                	<p><a class="more-link" href="https://george-chou.github.io/specimen/index.html" target="_blank"><i class="fa fa-external-link"></i> Cicada</a></p>
+                                	<p>Display of my cicada specimens in epoxy;</p>
+                                </blockquote>
+                                </div>
+                                
+                                <div class="item">
+                            	<blockquote class="quote">
+                                	<p><a class="more-link" href="https://george-chou.github.io/wordlink" target="_blank"><i class="fa fa-external-link"></i> wordLink</a></p>
+                                	<p>English vocabulary test;</p>
+                                </blockquote>
+                                </div>
+                            
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                        	<div class="item">                      
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Postgraduate <a href="https://sydney.edu.au/courses/courses/pc/master-of-engineering-software.html" target="_blank" style="color: inherit !important;">Software Engineering</a></h3>
+                                <h4 class="university"><a href="https://sydney.edu.au/about-us.html" target="_blank" style="color:inherit !important;">University of Sydney </a> <span class="year">(2019.8 - )</span></h4>
+                            </div><!--//item-->
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> BSc <a href="https://en.wikipedia.org/wiki/Computational_mathematics" target="_blank" style="color:inherit !important;">Information and Computing Science</a></h3>
+                                <h4 class="university"><a href="http://en.ustc.edu.cn/2011/0113/c5394a50095/page.htm" target="_blank" style="color:inherit !important;">University of Science and Technology of China </a> <span class="year">(2012.9 - 2016.7)</span></h4>
+                            </div><!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                            
+                <aside class="languages aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Languages</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li class="item">
+                                    <span class="title"><strong>Chinese:</strong></span>
+                                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>English:</strong></span>
+                                    <span class="level">Professional Proficiency <br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i></span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>Japanese:</strong></span>
+                                    <span class="level">Fundamental Awareness <br class="visible-xs"/><i class="fa fa-star"></i></span>
+                                </li><!--//item-->
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside>
+                
+                <aside class="list music aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Recently listening</h2>
+                        <div class="content">
+                            <ul class="list-unstyled"></ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                <aside class="list conferences aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Conferences</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-calendar"></i> <a href="http://2013.igem.org/World_Championship_Jamboree" target="_blank">iGEM 2013</a> (Cambridge, Massachusetts)</li>
+                                <li><i class="fa fa-calendar"></i> <a href="http://2013.igem.org/Jamborees-Asia" target="_blank">iGEM 2013 Asia</a> (<a href="http://www.cuhk.edu.hk/english/aboutus/university-intro.html" target="_blank" style="color:inherit !important;">CUHK</a>, Hong Kong)</li>
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Certificates</h2>
+                        <div class="content">
+                        
+                        	<div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Most Potential New Employee</h3>
+                                <h4 class="university"><a href="https://www.hollysys.com.sg/" target="_blank" style="color:inherit !important;">Beijing Hollysys System Engineering Co., Ltd. </a> <span class="year">2019.01</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Outstanding Staff Award</h3>
+                                <h4 class="university"><a href="http://www.dongyejituan.com/nav/2.html" target="_blank" style="color:inherit !important;">Liaoning Dongye Industry Co.,Ltd. </a> <span class="year">2017.12</span></h4>
+                            </div><!--//item-->
+
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Pre-admission Notice</h3>
+                                <h4 class="university"><a href="http://english.amss.cas.cn/au/bi/" target="_blank" style="color:inherit !important;">The AMSS of the CAS </a> <span class="year">2015.06</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Gold Medal of iGEM World Jamboree</h3>
+                                <h4 class="university"><a href="http://2013.igem.org/World_Championship_Jamboree" target="_blank" style="color:inherit !important;">Massachusetts Institute of Technology </a> <span class="year">2013.11</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Gold Medal of iGEM Asia Jamboree</h3>
+                                <h4 class="university"><a href="http://2013.igem.org/Jamborees-Asia" target="_blank" style="color:inherit !important;">The Chinese University of Hong Kong </a> <span class="year">2013.10</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> College English Test Band 4</h3>
+                                <h4 class="university"><a href="http://cet.neea.edu.cn/html1/folder/19081/5123-1.htm" target="_blank" style="color:inherit !important;">National University CET Examination Board </a> <span class="year">2013.06</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Second prize of Anhui Province's first flora and fauna specimen contest</h3>
+                                <h4 class="university"><a href="http://en.biox.ustc.edu.cn/2011/0809/c7057a87468/page.htm" target="_blank" style="color:inherit !important;">School of Life Sciences of USTC </a> <span class="year">2012.12</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Bronze Award of Outstanding Student Scholarship</h3>
+                                <h4 class="university"><a href="http://en.ustc.edu.cn/2011/0113/c5394a50095/page.htm" target="_blank" style="color:inherit !important;">University of Science and Technology of China </a> <span class="year">2012.11</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> First Prize of National High School Math League</h3>
+                                <h4 class="university"><a href="http://www.cms.org.cn/en/about.html" target="_blank" style="color:inherit !important;">The Chinese Mathematical Society </a> <span class="year">2011.11</span></h4>
+                            </div><!--//item-->
+                            
+                            <div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Third Prize of National High School Chemistry Competition</h3>
+                                <h4 class="university"><a href="https://www.chinesechemsoc.org/about" target="_blank" style="color:inherit !important;">Chinese Chemical society </a> <span class="year">2011.10</span></h4>
+                            </div><!--//item-->
+                            
+                        	<div class="item">                      
+                                <h3 class="title"><i class="fa fa-certificate"></i> Grade 10 Certificate of the Violin</h3>
+                                <h4 class="university"><a href="http://www.chnmusic.org/CmaInfo.html" target="_blank" style="color:inherit !important;">The Music Examination Committee of the Chinese Musicians Association</a> <span class="year">2006.08</span></h4>
+                            </div><!--//item-->
+                        
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                
+                <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Visitor map</h2>
+                        <div id="chartdiv"></div>
+                        
+                        <table class="vl">
+                        	<tr class="tbhead">
+                        		<td>Recent Visitors (History: <span>-</span>)</td><td>Browser</td><td>OS</td>
+                        	</tr>
+                        </table>
+                        
+                    </div>
+                </aside>
+                
+              
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+
+	<div class="returnTop"><span class="s"></span><span class="b"></span></div>
+    <div class="qrCode"></div>
+    <span id="qr"><img src="assets/images/qrcode/qrc.png" /><h5>Scan to browse on mobile.</h5></span>
+    
+    <div id="perfundo-single2" class="perfundo__overlay fadeIn">
+    	<figure class="perfundo__content perfundo__figure">
+        	<div class="perfundo__image"></div>
+        		<figcaption class="perfundo__figcaption">
+                	<p class="perfundo__caption"></p>
+                </figcaption>
+       </figure>
+       <a href="#perfundo-none" class="perfundo__close perfundo__control">Close</a>
+	</div>
+    
+  </body>
+</html> 
+

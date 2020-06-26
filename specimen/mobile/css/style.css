@@ -1,0 +1,280 @@
+#cpr
+{
+	margin:0 auto; 
+	position:relative; 
+	color: #FFF; 
+	display:block; 
+	margin-bottom: 10px;
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section 
+{
+	display: block;
+}
+	
+ol,ul
+{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+blockquote,q
+{
+	quotes:none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after
+{
+	content:'';
+	content:none;
+}
+
+table
+{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+/* start editing from here */
+a
+{
+	text-decoration:none;
+}
+
+.txt-rt
+{
+	text-align:right;
+}/* text align right */
+
+.txt-lt
+{
+	text-align:left;
+}/* text align left */
+
+.txt-center
+{
+	text-align:center;
+}/* text align center */
+
+.float-rt
+{
+	float:right;
+}/* float right */
+
+.float-lt
+{
+	float:left;
+}/* float left */
+
+.clear
+{
+	clear:both;
+}/* clear float */
+
+.pos-relative
+{
+	position:relative;
+}/* Position Relative */
+
+.pos-absolute
+{
+	position:absolute;
+}/* Position Absolute */
+
+.vertical-base
+{	
+vertical-align:baseline;
+}/* vertical align baseline */
+
+.vertical-top
+{	
+vertical-align:top;
+}/* vertical align top */
+
+.underline
+{	
+padding-bottom:5px;	
+border-bottom: 1px solid #eee; 
+margin:0 0 20px 0;
+}/* Add 5px bottom padding and a underline */
+
+nav.vertical ul li
+{	
+display:block;
+}/* vertical menu */
+
+nav.horizontal ul li
+{	
+display: inline-block;
+}/* horizontal menu */
+
+img
+{
+	max-width:100%;
+}
+/*end reset*/
+  body {
+    background: #292929;/*url(../img/cicada.jpg);*/
+    text-align:center;
+    margin:0;
+    padding:0;
+    /*font-family: 'Righteous', cursive;*/
+  }
+  .container {
+    width: 100% !important; 
+	position: relative;
+	margin:0 auto !important;
+	padding-top: 15px !important;
+  }
+
+  h1 {
+    font-size:3em;
+    color:#fff;
+	  margin: 1.7em 0 0;
+	  font-style:italic;
+  }
+  p.copy{
+  /*-- w3layouts --*/
+	color:#fff;
+	font-size:1.8em;
+	text-align:center;
+	letter-spacing: 1px;
+	position:fixed;
+	top:100px;
+	display:block;
+	vertical-align:central;
+	alignment-adjust:central;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	left: 0;
+	width:100%;
+}
+p.copy a{
+	color:#fff;
+	text-decoration:underline;
+}
+p.copy a:hover{
+	text-decoration:none;
+}
+@media(max-width:1440px){
+.container {
+    width: 36.1%;
+}
+}
+@media(max-width:1366px){
+.container {
+    width: 38%;
+}
+}
+@media(max-width:1280px){
+.container {
+/*-- agileits --*/
+    width: 40.5%;
+
+	}
+}
+@media(max-width:1024px){
+.container {
+    width: 50.4%;
+	    margin: 3em auto;
+}
+h1 {
+    margin: 1.3em 0 0;
+}
+}
+@media(max-width:991px){
+.container {
+    width: 53.4%;
+}
+}
+@media(max-width:800px){
+.container {
+    width: 53.4%;
+}
+}
+@media(max-width:768px){
+ /*-- w3layouts --*/
+.container {
+    width:68%;
+}
+}
+@media (max-width: 736px){
+.container {
+    width: 72.5%;
+}
+}
+@media (max-width: 667px){
+.container {
+    width: 80%;
+}
+}
+@media(max-width:640px){
+.container {
+    width: 84%;
+}
+}
+@media(max-width:600px){
+.container {
+    width: 72%;
+
+	}
+}
+@media(max-width:568px){
+.container {
+    width: 76%;
+}
+}
+@media(max-width:480px){
+.container {
+    width: 90%;
+}
+}
+@media(max-width:414px){
+.container {
+    width: 91%;
+	margin: 2em auto;
+}
+p.copy {
+    padding: 0em 1em;
+    line-height: 1.8em;
+	 font-size: 0.8em;
+
+}
+h1 {
+    font-size: 2.3em;
+}
+/*-- agileits --*/
+}
+@media(max-width:384px){
+
+h1 {
+    font-size: 2.2em;
+}
+}
+@media(max-width:384px){
+
+.container {
+    width: 91%;
+	margin: 3em auto;
+}
+h1 {
+    font-size: 2.2em;
+}
+}
+@media(max-width:320px){
+h1 {
+    font-size: 1.8em;
+}
+.container {
+	margin: 2em auto;
+}
+}
