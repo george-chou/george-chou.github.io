@@ -54,7 +54,13 @@ function getCoord(num)
 	$.ajaxSettings.async = false;	
 	$.ajax({
   		url: domain + "/visitormap/index.php",
-  		data: {"b":b.no,"bv":b.ver,"os":os.no,"osv":os.ver,"lg":(isEn?"en":"cn")},  
+  		data: {
+			"b":b.no,
+			"bv":b.ver,
+			"os":os.no,
+			"osv":os.ver,
+			"lg":(isEn?"en":"cn")
+			},  
   		dataType: "json",
   		success: function(data){
 			
