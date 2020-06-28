@@ -1,4 +1,4 @@
-var domain = "https://georgechou21.asuscomm.com:4443";
+var domain = "https://georgechou21.asuscomm.com:4443/mybackend";
 
 var isEn = !(document.location.href.indexOf("-cn.html") > -1);
 
