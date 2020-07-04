@@ -48,16 +48,16 @@ function down(x, y)
 */
 function getCoord(num)
 {
-	var count = 0;
+	//var count = 0;
 	
 	var rec = {
 		markers : new Array(),
 		recent : new Array(num),
-		num : 0
+		count : 0
 	}
 
-	var b = Browser.brow;//getBrowser();
-	var os = Browser.osys;//getOS();
+	var b = Browser.brow;
+	var os = Browser.osys;
 	
 	$.ajaxSettings.async = false;	
 	$.ajax({
@@ -73,17 +73,31 @@ function getCoord(num)
   		success: function(data){
 			
 			var cip = data[0].IP;
-			rec.num = data.length - 1;
+			rec.count = data.length - 1;
 			//data.sort(down);
 			
 			$.each(data, function(i, item)
 			{
 				var country = isEn ? item.country : item.countryzh;
 				var city = isEn ? item.city : item.cityzh;
-				rec.markers[i] = new mInfo(item.Latitude, item.Longitude, item.IP, cip == item.IP);
-				if(i > rec.num - num) 
+				
+				rec.markers[i] = new mInfo(
+					item.Latitude, 
+					item.Longitude, 
+					item.IP, 
+					cip == item.IP
+				);
+				
+				if(i < num) 
 				{
-					rec.recent[rec.num - i] = new vInfo(country, city, item.Browser, item.OS, item.isocode, [item.Latitude, item.Longitude]);
+					rec.recent[i] = new vInfo(
+						country, 
+						city, 
+						item.Browser, 
+						item.OS, 
+						item.isocode, 
+						[item.Latitude, item.Longitude]
+					);
 				}
 			})
 		}
