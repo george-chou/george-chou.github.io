@@ -1,31 +1,40 @@
 var domain = "https://georgechou21.asuscomm.com:4443/mybackend";
-
 var isEn = !(document.location.href.indexOf("-cn.html") > -1);
 
 requirejs.config({
 	baseUrl: 'assets/js',
+	map: {
+        '*': {
+            'css': 'https://cdn.bootcdn.net/ajax/libs/require-css/0.1.10/css.min.js'
+        }
+    },
 	paths: {
-		'jquery':   'jquery-1.11.2.min',
-		'device':   'current-device.min',
-		'browser':  'browser',
-		'mustache': 'mustache.min',
+		'jquery':   'https://cdn.bootcdn.net/ajax/libs/jquery/1.11.2/jquery.min',
+		'device':   'https://unpkg.com/current-device/umd/current-device.min',		
+		'mustache': 'https://cdn.bootcdn.net/ajax/libs/mustache.js/4.0.1/mustache.min',
 		'github': 	(isEn ? 'github-activity-0.1.1.min' : 'github-activity-0.1.1-cn.min'),	
-		'core':		'core',		
+		'browser':  'browser',
+		'core':		'core',
 		'maps':     'maps',
 		'worldlow': 'worldLow',
 		'animated': 'animated'
 	},
 	shim: {
 		'browser': {
-			deps: ['device'],
+			deps: [
+				'device',
+				'css!../css/devices.css', 
+				'css!../css/media.css',
+				'css!https://cdn.bootcdn.net/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css'
+			],
 			exports: 'Browser'
 		},
-		'mustache': {
-			deps: [],
-			exports: 'Mustache'
-		},
 		'github': {
-			deps: ['mustache'],
+			deps: [
+				'mustache', 
+				'css!../css/github-activity-0.1.1.min.css', 
+				'css!https://cdn.bootcdn.net/ajax/libs/octicons/6.0.1/octicons.min.css'
+			],
 			exports: 'GitHubActivity'
 		},
 		'core': {
@@ -34,16 +43,16 @@ requirejs.config({
 		},
 		'maps': {
 			deps: ['core'],
-			exports: "_"
+			exports: 'am4maps'
 		},
 		'worldlow': {
 			deps: ['core'],
-			exports: "_"
+			exports: 'am4geodata_worldLow'
 		},
 		'animated': {
 			deps: ['core'],
-			exports: "_"
-		}			
+			exports: 'am4themes_animated'
+		}		
 	},
 	waitSeconds: 0
 });
@@ -52,4 +61,4 @@ requirejs(['github'], function(GitHubActivity) {
 	
 	GitHubActivity.feed({ username: "george-chou", selector: "#ghfeed" });
 	
-});	
+});

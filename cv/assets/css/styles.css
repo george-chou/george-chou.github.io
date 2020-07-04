@@ -566,7 +566,7 @@ a.dotted-link:hover {
 
 .qrCode{
 	display:none;
-	background: url(../images/qrcode/qr.png) no-repeat center;
+	background: url(../img/qr.png) no-repeat center;
 	position:fixed;
 	right:5px;
 	bottom:85px;

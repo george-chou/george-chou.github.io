@@ -1,8 +1,13 @@
-requirejs(['jquery'], function($) {
+requirejs([
+	'css!https://cdn.bootcdn.net/ajax/libs/perfundo/4.0.4/perfundo.with-icons.min.css',
+	'css!../css/perfundo.css',
+	'jquery'
+], 
+function(_, _, $) {
 
 function ShowCer(img, caption)
 {
-	var imglnk = 'assets/images/projects/project-' + img + '.png';
+	var imglnk = 'assets/img/project-' + img + '.png';
 	$('.perfundo__image').css("background-image","url(" + imglnk + ")"); 
 	$('.perfundo__caption').text(caption);
 }
@@ -13,7 +18,9 @@ function workExp()
 	var caption = $('.latest').eq(0).find('.title');
 	
 	workexp.each(function(index) {
-        $(this).click(function(e) { ShowCer(index, caption.eq(index).text()); });
+        $(this).click(function(e) { 
+			ShowCer(index, caption.eq(index).text()); 
+		});
     });
 }
 /*

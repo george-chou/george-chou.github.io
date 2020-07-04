@@ -1,8 +1,15 @@
-requirejs(['jquery', 'browser'], function($, Browser) {
+requirejs([
+	'css!https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css', 
+	'css!https://cdn.bootcdn.net/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css', 
+	'css!../css/styles.css',
+	'jquery', 
+	'browser'
+],
+function(_, _, _, $, Browser) {
 
 function notCompatible()
 {
-	var b = Browser.brow;//getBrowser();
+	var b = Browser.brow;
 	return (b.type == "IE" && b.ver < 11) || (b.type == "Adblock");
 }
 
@@ -11,7 +18,10 @@ function preLoad()
 	if($.support.leadingWhitespace)
 	{
 		$("html").show();
-		if(notCompatible()) $(".unsupported-browser").show();
+		if(notCompatible()) 
+		{
+			$(".unsupported-browser").show();
+		}
 	}
 	else
 	{
@@ -21,19 +31,36 @@ function preLoad()
 
 function LoadQRC()
 {
-	device.mobile() ? $(".qrCode").hide() : $(".qrCode").show();
-	$(".qrCode").hover(function(e) { $("#qr").fadeIn(200); });    
-	$(".qrCode").mouseleave(function(e) { $("#qr").fadeOut(200); });
+	if(device.mobile())
+	{
+		$(".qrCode").hide();
+	}
+	else
+	{
+		$(".qrCode").show();
+	}
+	
+	$(".qrCode").hover(function(e) { 
+		$("#qr").fadeIn(200); 
+	});    
+	
+	$(".qrCode").mouseleave(function(e) { 
+		$("#qr").fadeOut(200); 
+	});
 }
 
 function LoadSafeLink() 
 {
 	if (!document.getElementsByTagName) return;
+	
 	var anchors = document.getElementsByTagName("a");
 	for (var i = 0 ; i < anchors.length ; i++) 
 	{
 		var anchor = anchors[i];
-		if (anchor.getAttribute("href") && anchor.getAttribute("target") == "_blank") anchor.rel = "nofollow noopener noreferrer";
+		if (anchor.getAttribute("href") && anchor.getAttribute("target") == "_blank")
+		{ 
+			anchor.rel = "nofollow noopener noreferrer";
+		}
 	}
 	
 	var frames = document.getElementsByTagName("iframe");
@@ -47,9 +74,20 @@ function LoadSafeLink()
 function LoadToTop()
 {
 	$(window).scroll(function(){ 
-		($('html').scrollTop() + $('body').scrollTop() == 0) ? $('.returnTop').fadeOut(100) : $('.returnTop').fadeIn(100); 
+		if($('html').scrollTop() + $('body').scrollTop() == 0)
+		{
+			$('.returnTop').fadeOut(100);
+		}
+		else
+		{
+			$('.returnTop').fadeIn(100); 
+		}
 	});
-	$('.returnTop').click(function(){ $('html, body').animate({scrollTop: 0}, 200); });	
+	
+	$('.returnTop').click(function(){ 
+		$('html, body').animate({scrollTop: 0}, 200); 
+	});	
+	
 }
 
 preLoad();

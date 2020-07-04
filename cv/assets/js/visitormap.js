@@ -1,4 +1,12 @@
-﻿requirejs(['jquery', 'browser', 'core', 'maps', 'worldlow', 'animated'], function($, Browser, am4core, _, _, _){
+﻿requirejs([
+	'jquery', 
+	'browser', 
+	'core', 
+	'maps', 
+	'worldlow', 
+	'animated'
+], 
+function($, Browser, am4core, am4maps, am4geodata_worldLow, am4themes_animated){
 
 function vInfo(country, city, browser, os, iso, mark)
 {
@@ -29,7 +37,7 @@ function mInfo(latitude, longitude, IP, current)
 	
 	this.current = current;
 }
-
+/*
 function down(x, y)
 {
 	var date1 = new Date(x.datetime);
@@ -37,7 +45,7 @@ function down(x, y)
 	
 	return (date1.getTime() > date2.getTime()) ? 1 : -1;
 }
-
+*/
 function getCoord(num)
 {
 	var count = 0;
@@ -66,14 +74,17 @@ function getCoord(num)
 			
 			var cip = data[0].IP;
 			rec.num = data.length - 1;
-			data.sort(down);
+			//data.sort(down);
 			
 			$.each(data, function(i, item)
 			{
 				var country = isEn ? item.country : item.countryzh;
 				var city = isEn ? item.city : item.cityzh;
 				rec.markers[i] = new mInfo(item.Latitude, item.Longitude, item.IP, cip == item.IP);
-				if(i > rec.num - num) rec.recent[rec.num - i] = new vInfo(country, city, item.Browser, item.OS, item.isocode, [item.Latitude, item.Longitude]);
+				if(i > rec.num - num) 
+				{
+					rec.recent[rec.num - i] = new vInfo(country, city, item.Browser, item.OS, item.isocode, [item.Latitude, item.Longitude]);
+				}
 			})
 		}
 	});

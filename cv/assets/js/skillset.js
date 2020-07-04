@@ -7,7 +7,10 @@ function toPercent(point)
     return str;
 }
 
-function porp(x, y){ return (x.frequency < y.frequency) ? 1 : -1; }
+function porp(x, y)
+{ 
+	return x.frequency < y.frequency ? 1 : -1; 
+}
 
 
 function loadSkillset(lang, freq)
