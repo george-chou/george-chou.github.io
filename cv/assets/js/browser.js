@@ -186,11 +186,12 @@ function getBrowser()
 	}
 	
 	var isEdge = (agent.indexOf("edge") > -1);
-	if(isEdge)
+	var isEdg = (agent.indexOf("edg") > -1);
+	if(isEdge || isEdg)
 	{
 		browser.type = "Edge";
 		browser.no = 2;
-		browser.ver = agent.match(/edge\/([\d.]+)/)[1];
+		browser.ver = isEdge ? agent.match(/edge\/([\d.]+)/)[1] : agent.match(/edg\/([\d.]+)/)[1];
 		return browser;
 	}
 
