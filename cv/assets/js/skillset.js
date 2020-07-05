@@ -2,9 +2,7 @@ requirejs(['jquery'], function($) {
 
 function toPercent(point)
 {
-    var str = Number(point * 100).toFixed(1);
-    str += "%";
-    return str;
+    return Number(point * 100).toFixed(1) + "%";
 }
 
 function porp(x, y)
@@ -39,11 +37,9 @@ function LoadLevelBar()
 		})
 		
 	});
-	
+	console.log('Skillset ready!');
 }
 
 LoadLevelBar(); 
-
-console.log('Skillset ready!');
 
 });

@@ -37,19 +37,9 @@ function mInfo(latitude, longitude, IP, current)
 	
 	this.current = current;
 }
-/*
-function down(x, y)
-{
-	var date1 = new Date(x.datetime);
-	var date2 = new Date(y.datetime);
-	
-	return (date1.getTime() > date2.getTime()) ? 1 : -1;
-}
-*/
+
 function getCoord(num)
 {
-	//var count = 0;
-	
 	var rec = {
 		markers : new Array(),
 		recent : new Array(num),
@@ -59,7 +49,7 @@ function getCoord(num)
 	var b = Browser.brow;
 	var os = Browser.osys;
 	
-	$.ajaxSettings.async = false;	
+	//$.ajaxSettings.async = false;	
 	$.ajax({
   		url: domain + "/visitormap/index.php",
   		data: {
@@ -74,7 +64,6 @@ function getCoord(num)
 			
 			var cip = data[0].IP;
 			rec.count = data.length - 1;
-			//data.sort(down);
 			
 			$.each(data, function(i, item)
 			{
@@ -166,7 +155,7 @@ function updateCustomMarkers( event ) {
     image.dummyData.externalElement.style.top = xy.y + 'px';
     image.dummyData.externalElement.style.left = xy.x + 'px';
   });
-
+  console.log('Map ready!');
 }
 
 function hideTips()
@@ -286,12 +275,12 @@ function LoadVisitors(recent, count)
 	}
 	
 	$(".tbhead").find("span").text(count);
+	
+	console.log('Visitor ready!');
 }
 
 var rec = getCoord(3);
 DrawMap(rec.markers);
 LoadVisitors(rec.recent, rec.count);
-
-console.log('Visitormap ready!');
 
 });
