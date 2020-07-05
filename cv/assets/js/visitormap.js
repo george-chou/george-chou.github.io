@@ -292,4 +292,6 @@ var rec = getCoord(3);
 DrawMap(rec.markers);
 LoadVisitors(rec.recent, rec.count);
 
+console.log('Visitormap ready!');
+
 });

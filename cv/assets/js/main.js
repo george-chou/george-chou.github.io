@@ -95,5 +95,7 @@ LoadQRC();
 LoadToTop();
 LoadSafeLink();
 
+console.log('Main ready!');
+
 });
 

@@ -100,4 +100,7 @@ getCers();
 */
 
 workExp();
+
+console.log('Perfundo ready!');
+
 });

@@ -24,6 +24,8 @@ function postSonglist()
 }
 
 postSonglist();
+
+console.log('Codemusic ready!');
 	
 });
 

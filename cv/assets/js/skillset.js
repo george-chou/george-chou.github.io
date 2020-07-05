@@ -12,7 +12,6 @@ function porp(x, y)
 	return x.frequency < y.frequency ? 1 : -1; 
 }
 
-
 function loadSkillset(lang, freq)
 {
 	var newItem = '<div class="item"><h3 class="level-title">' + lang;
@@ -27,6 +26,7 @@ function LoadLevelBar()
 {
 	var jurl = domain + "/skillset/index.php";
 	
+	$.ajaxSettings.async = false;
 	$.getJSON(jurl, function (data) 
 	{
 		data.sort(porp);
@@ -43,5 +43,7 @@ function LoadLevelBar()
 }
 
 LoadLevelBar(); 
+
+console.log('Skillset ready!');
 
 });
