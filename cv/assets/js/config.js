@@ -56,9 +56,9 @@ requirejs.config({
 	},
 	waitSeconds: 0
 });
-
+/*
 requirejs(['github'], function(GitHubActivity) {
 	
 	GitHubActivity.feed({ username: "george-chou", selector: "#ghfeed" });
 	
-});
+});*/
