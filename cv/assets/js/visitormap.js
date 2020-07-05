@@ -290,6 +290,6 @@ function LoadVisitors(recent, count)
 
 var rec = getCoord(3);
 DrawMap(rec.markers);
-LoadVisitors(rec.recent, rec.num);
+LoadVisitors(rec.recent, rec.count);
 
 });
