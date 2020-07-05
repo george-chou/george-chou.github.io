@@ -22,18 +22,18 @@ requirejs.config({
 	shim: {
 		'browser': {
 			deps: [
-				'device',
+				'css!https://cdn.bootcdn.net/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css',
 				'css!../css/devices.css', 
 				'css!../css/media.css',
-				'css!https://cdn.bootcdn.net/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css'
+				'device'
 			],
 			exports: 'Browser'
 		},
 		'github': {
 			deps: [
-				'mustache', 
-				'css!../css/github-activity-0.1.1.min.css', 
-				'css!https://cdn.bootcdn.net/ajax/libs/octicons/6.0.1/octicons.min.css'
+				'css!https://cdn.bootcdn.net/ajax/libs/octicons/6.0.1/octicons.min.css',
+				'css!../css/github-activity-0.1.1.min.css',
+				'mustache'
 			],
 			exports: 'GitHubActivity'
 		},
