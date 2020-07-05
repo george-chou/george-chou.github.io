@@ -26,7 +26,7 @@ function LoadLevelBar()
 {
 	var jurl = domain + "/skillset/index.php";
 	
-	$.ajaxSettings.async = false;
+	//$.ajaxSettings.async = false;
 	$.getJSON(jurl, function (data) 
 	{
 		data.sort(porp);
