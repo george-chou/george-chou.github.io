@@ -90,13 +90,20 @@ function getCoord(num)
 						[item.Latitude, item.Longitude]
 					);
 				}
-			})
+			});
+			
+			console.log('Visitormap ready!');
+			
 		},
 		error: function(data, type, err)
 		{
 			console.log('Getting failed: ' + data.status);
 			console.log('Error type: ' + type);
 			console.log('Error: ' + err);
+			
+			alert('Getting failed: ' + data.status);
+			alert('Error type: ' + type);
+			alert('Error: ' + err);
 		}		
 	});
 	
@@ -241,7 +248,6 @@ function DrawMap(mks)
 		}
 	});
 	
-	console.log('Visitormap - map ready!');
 }
 
 function LoadVisitors(recent, count)
@@ -275,8 +281,6 @@ function LoadVisitors(recent, count)
 	}
 	
 	$(".tbhead").find("span").text(count);
-	
-	console.log('Visitormap - visitor ready!');
 }
 
 var rec = getCoord(3);

@@ -42,11 +42,11 @@ function LoadQRC()
 		$(".qrCode").show();
 	}
 	
-	$(".qrCode").hover(function(e) { 
+	$(".qrCode").hover(function(e) {
 		$("#qr").fadeIn(200); 
 	});    
 	
-	$(".qrCode").mouseleave(function(e) { 
+	$(".qrCode").mouseleave(function(e) {
 		$("#qr").fadeOut(200); 
 	});
 }
@@ -75,7 +75,7 @@ function LoadSafeLink()
 
 function LoadToTop()
 {
-	$(window).scroll(function(){ 
+	$(window).scroll(function(){
 		if($('html').scrollTop() + $('body').scrollTop() == 0)
 		{
 			$('.returnTop').fadeOut(100);
@@ -89,7 +89,6 @@ function LoadToTop()
 	$('.returnTop').click(function(){ 
 		$('html, body').animate({scrollTop: 0}, 200); 
 	});	
-	
 }
 
 preLoad();

@@ -103,7 +103,7 @@ getCers();
 
 workExp();
 
-console.log('Perfundo ready!');
+//console.log('Perfundo ready!');
 
 // End of Module Perfundo
 
