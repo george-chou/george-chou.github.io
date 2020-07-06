@@ -7,6 +7,8 @@ requirejs([
 ],
 function(_, _, _, $, Browser) {
 
+// Main Module
+
 function notCompatible()
 {
 	var b = Browser.brow;
@@ -51,20 +53,20 @@ function LoadQRC()
 
 function LoadSafeLink() 
 {
-	if (!document.getElementsByTagName) return;
-	
+	if(!document.getElementsByTagName) return;	
 	var anchors = document.getElementsByTagName("a");
-	for (var i = 0 ; i < anchors.length ; i++) 
+	var frames = document.getElementsByTagName("iframe");
+	
+	for(var i = 0 ; i < anchors.length ; i++) 
 	{
 		var anchor = anchors[i];
-		if (anchor.getAttribute("href") && anchor.getAttribute("target") == "_blank")
+		if(anchor.getAttribute("href") && anchor.getAttribute("target") == "_blank")
 		{ 
 			anchor.rel = "nofollow noopener noreferrer";
 		}
 	}
 	
-	var frames = document.getElementsByTagName("iframe");
-	for (var j = 0 ; j < frames.length ; j++)
+	for(var j = 0 ; j < frames.length ; j++)
 	{
 		var frame = frames[j];
 		frame.sandbox = "allow-same-origin allow-scripts";
@@ -96,6 +98,8 @@ LoadToTop();
 LoadSafeLink();
 
 console.log('Main ready!');
+
+// End of Main Module
 
 });
 

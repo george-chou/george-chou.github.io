@@ -1,4 +1,6 @@
 requirejs(['jquery'], function($) {
+	
+// Module Skillset
 
 function toPercent(point)
 {
@@ -20,26 +22,42 @@ function loadSkillset(lang, freq)
 	return newItem;
 }
 
+function appendSkillset(i, frequency, language)
+{
+	var freq = toPercent(frequency);
+	$('.skillset').append(loadSkillset(language, freq));
+	$('.skillset').find('.level-bar-inner').eq(i).animate({ width: freq }, 800);
+}
+
 function LoadLevelBar()
 {
-	var jurl = domain + "/skillset/index.php";
-	
-	//$.ajaxSettings.async = false;
-	$.getJSON(jurl, function (data) 
-	{
-		data.sort(porp);
-		var skillset = $('.skillset');
-		$.each(data, function(i, item)
+	$.ajax({
+  		url	  	 : domain + "/skillset/index.php",
+		type  	 : 'GET',
+		async 	 : false,
+  		dataType : 'json',
+  		success  : function(data)
 		{
-			var freq = toPercent(item.frequency);
-			skillset.append(loadSkillset(item.language, freq));
-			skillset.find('.level-bar-inner').eq(i).animate({ width: freq }, 800);
-		})
-		
+			data.sort(porp);
+			$.each(data, function(i, item)
+			{
+				appendSkillset(i, item.frequency, item.language);
+			});
+			
+			console.log('Skillset ready!');
+		},
+		error: function(data, type, err)
+		{
+			console.log('Getting failed: ' + data.status);
+			console.log('Error type: ' + type);
+			console.log('Error: ' + err);
+		}
 	});
-	console.log('Skillset ready!');
+	
 }
 
 LoadLevelBar(); 
+
+// End of Module Skillset
 
 });

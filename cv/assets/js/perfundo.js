@@ -5,6 +5,8 @@ requirejs([
 ], 
 function(_, _, $) {
 
+// Module Perfundo
+
 function ShowCer(img, caption)
 {
 	var imglnk = 'assets/img/project-' + img + '.png';
@@ -102,5 +104,7 @@ getCers();
 workExp();
 
 console.log('Perfundo ready!');
+
+// End of Module Perfundo
 
 });
