@@ -19,7 +19,9 @@ function preLoad()
 {
 	if($.support.leadingWhitespace)
 	{
-		$("html").show();
+		//$("html").show();
+		$("html").css('visibility', 'visible');
+		
 		if(notCompatible()) 
 		{
 			$(".unsupported-browser").show();
@@ -40,15 +42,9 @@ function LoadQRC()
 	else
 	{
 		$(".qrCode").show();
+		$(".qrCode").hover(function(e) { $("#qr").fadeIn(200); });
+		$(".qrCode").mouseleave(function(e) { $("#qr").fadeOut(200); });
 	}
-	
-	$(".qrCode").hover(function(e) {
-		$("#qr").fadeIn(200); 
-	});    
-	
-	$(".qrCode").mouseleave(function(e) {
-		$("#qr").fadeOut(200); 
-	});
 }
 
 function LoadSafeLink() 

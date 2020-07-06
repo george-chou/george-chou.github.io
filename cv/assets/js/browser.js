@@ -15,15 +15,17 @@ function getParenthesesStr(text)
 	if (!$.isEmptyObject(options)) 
 	{
         var option = options[0];
-        if (!$.isEmptyObject(option)) result = option.substring(1, option.length - 1);
+        if (!$.isEmptyObject(option)) 
+		{
+			result = option.substring(1, option.length - 1);
+		}
     }
     return result;
 }
 
 function ParseWinVer(ver)
-{
-	var pver = Math.floor(10.0 * ver);
-	switch(pver)
+{ 
+	switch(Math.floor(10.0 * ver))
 	{
 		case 50: return "2000";
 		case 51: return "XP";
@@ -37,36 +39,35 @@ function ParseWinVer(ver)
 	}
 }
 
-
 function ParseOS(t)
 {
-	var type = t.toLowerCase();
-	
-	if(type == "iphone/ios") return 0;
-	if(type == "ipad/ios") return 1;
-	if(type == "ipod/ios") return 2;
-	if(type == "android") return 3; 
-	if(type == "windows phone") return 5;
-	if(type == "windows 10/server 2016") return 6;
-	if(type == "windows 8.1/server 2012 r2") return 7;
-	if(type == "windows 8/server 2012") return 8;
-	if(type == "windows 7/server 2008 r2") return 9;
-	if(type == "windows vista/server 2008") return 10;
-	if(type == "windows 64-Bit edition/server 2003/server 2003 r2") return 11;
-	if(type == "windows xp") return 12;
-	if(type == "windows 2000") return 13;
-	if(type == "macos") return 14;
-	if(type == "linux") return 15; 
-	
-	return -1;
+	switch(t.toLowerCase())
+	{
+		case "iphone/ios": return 0;
+		case "ipad/ios": return 1;
+		case "ipod/ios": return 2;
+		case "android": return 3; 
+		case "windows phone": return 5;
+		case "windows 10/server 2016": return 6;
+		case "windows 8.1/server 2012 r2": return 7;
+		case "windows 8/server 2012": return 8;
+		case "windows 7/server 2008 r2": return 9;
+		case "windows vista/server 2008": return 10;
+		case "windows 64-Bit edition/server 2003/server 2003 r2": return 11;
+		case "windows xp": return 12;
+		case "windows 2000": return 13;
+		case "macos": return 14;
+		case "linux": return 15;
+		default: return -1;
+	}
 }
 
 function getOS()
 {
 	var os = {
 		type : device.os.toLowerCase(),
-		no : -1,
-		ver : -1
+		no 	 : -1,
+		ver  : -1
 	};
 	
 	var agent = navigator.userAgent.toLowerCase(); 
@@ -162,8 +163,8 @@ function getBrowser()
 	
 	var browser = {
 		type : "Unknown",
-		no : -1,
-		ver : -1
+		no 	 : -1,
+		ver  : -1
 	};
 	
 	var isOpera = (agent.indexOf("opr") > -1);
@@ -322,12 +323,12 @@ function toSysICO(os)
 }
 
 var Browser = {
-	brow: getBrowser(),
-	osys: getOS(),
-	toBroICO: toBroICO,
-	toBroName: toBroName,
-	toSysName: toSysName,
-	toSysICO: toSysICO
+	brow	  : getBrowser(),
+	osys	  : getOS(),
+	toBroICO  : toBroICO,
+	toBroName : toBroName,
+	toSysName : toSysName,
+	toSysICO  : toSysICO
 };
 
 return Browser;
