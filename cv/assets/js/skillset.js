@@ -56,8 +56,9 @@ function LoadLevelBar()
 	
 }
 
+$(function(){
 LoadLevelBar(); 
-
+});
 // End of Module Skillset
 
 });

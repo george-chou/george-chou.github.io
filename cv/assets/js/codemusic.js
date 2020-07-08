@@ -36,8 +36,9 @@ function getSonglist()
 	
 }
 
+$(function(){
 getSonglist();
-
+});
 // End of Module Codemusic
 
 });

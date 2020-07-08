@@ -283,10 +283,11 @@ function LoadVisitors(recent, count)
 	$(".tbhead").find("span").text(count);
 }
 
+$(function(){
 var rec = getCoord(3);
 DrawMap(rec.markers);
 LoadVisitors(rec.recent, rec.count);
-
+});
 // End of Module Visitormap
 
 });

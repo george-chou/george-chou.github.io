@@ -101,8 +101,9 @@ function getCers()
 getCers();
 */
 
+$(function(){
 workExp();
-
+});
 //console.log('Perfundo ready!');
 
 // End of Module Perfundo

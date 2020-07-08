@@ -2,10 +2,11 @@ requirejs([
 	'css!https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css', 
 	'css!https://cdn.bootcdn.net/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css', 
 	'css!../css/styles.css',
-	'jquery', 
+	'jquery',
+	'device',
 	'browser'
 ],
-function(_, _, _, $, Browser) {
+function(_, _, _, $, device, Browser) {
 
 // Main Module
 
@@ -87,12 +88,15 @@ function LoadToTop()
 	});	
 }
 
+window.onload = function()
+{
+
 preLoad();
 LoadQRC();
 LoadToTop();
 LoadSafeLink();
 
-console.log('Main ready!');
+}
 
 // End of Main Module
 
