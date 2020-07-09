@@ -26,15 +26,15 @@ function ParseWinVer(ver)
 { 
 	switch(Math.floor(10.0 * ver))
 	{
-		case 50	: return "2000";
-		case 51	: return "XP";
-		case 52	: return "64-Bit Edition/Server 2003/Server 2003 R2";
-		case 60	: return "Vista/Server 2008";
-		case 61	: return "7/Server 2008 R2";
-		case 62	: return "8/Server 2012";
-		case 63	: return "8.1/Server 2012 R2";
-		case 100: return "10/Server 2016";
-		default	: return "Unknown";
+		case 50	 : return "2000";
+		case 51	 : return "XP";
+		case 52	 : return "64-Bit Edition/Server 2003/Server 2003 R2";
+		case 60	 : return "Vista/Server 2008";
+		case 61	 : return "7/Server 2008 R2";
+		case 62	 : return "8/Server 2012";
+		case 63	 : return "8.1/Server 2012 R2";
+		case 100 : return "10/Server 2016";
+		default	 : return "Unknown";
 	}
 }
 
@@ -62,11 +62,11 @@ function ParseOS(t)
 }
 
 function getOS()
-{	
+{
 	var agent = navigator.userAgent.toLowerCase(); 
 	
 	var os = {
-		type : device.os.toLowerCase(),
+		type : (device.os).toLowerCase(),
 		no 	 : -1,
 		ver  : -1
 	};
@@ -75,14 +75,13 @@ function getOS()
 	{				
 		if(os.type == "ios")
 		{
-			var ver = agent.match(/os ([\d_]+)/)[1].replace(/_/g, '.');
-			var sys = getParenthesesStr(agent).toLowerCase(); 
-								
+			var sys = getParenthesesStr(agent).toLowerCase();
+			
 			if(sys.indexOf("iphone") > -1)
 			{ 
 				os.type = "iPhone/IOS";
 				os.no = ParseOS(os.type);
-				os.ver = ver;
+				os.ver = agent.match(/os ([\d_]+)/)[1].replace(/_/g, '.');
 				return os;
 			}
 			
@@ -90,7 +89,7 @@ function getOS()
 			{
 				 os.type = "iPad/IOS";
 				 os.no = ParseOS(os.type);
-				 os.ver = ver;
+				 os.ver = agent.match(/os ([\d_]+)/)[1].replace(/_/g, '.');
 				 return os;
 			}
 			
@@ -98,23 +97,31 @@ function getOS()
 			{
 				os.type = "iPod/IOS";
 				os.no = ParseOS(os.type);
-				os.ver = ver;
+				os.ver = agent.match(/os ([\d_]+)/)[1].replace(/_/g, '.');
 				return os;
 			}
+			
+			if(sys.indexOf("macintosh") > -1)
+			{
+				os.type = "iPad/IOS";
+				os.no = ParseOS(os.type);
+				os.ver = sys.match(/intel mac os x ([\d_]+)/)[1].replace(/_/g, '.');
+				return os;
+			} 
 		}
 		else if(os.type == "windows")
 		{
 			if(agent.indexOf("windows phone") > -1)
 			{
 				os.type = "Windows Phone";
-				os.ver = agent.match(/windows phone ([\d.]+)/)[1]; 
 				os.no = ParseOS(os.type);
+				os.ver = agent.match(/windows phone ([\d.]+)/)[1]; 				
 			}
 			else
 			{
 				os.type = "Windows";
-				os.ver = agent.match(/windows nt ([\d.]+)/)[1];
 				os.no = ParseOS(os.type + " " + ParseWinVer(os.ver));
+				os.ver = agent.match(/windows nt ([\d.]+)/)[1];
 			}			
 			
 			return os;
@@ -183,6 +190,15 @@ function getBrowser()
 		return browser;
 	}
 	
+	var isWechat = (agent.indexOf("micromessenger") > -1);
+	if(isWechat)
+	{
+		browser.type = "Wechat";
+		browser.no = 4;
+		browser.ver = agent.match(/micromessenger\/([\d.]+)/)[1];
+		return browser;
+	}
+	
 	var isEdge = (agent.indexOf("edge") > -1);
 	var isEdg = (agent.indexOf("edg") > -1);
 	if(isEdge || isEdg)
@@ -190,16 +206,6 @@ function getBrowser()
 		browser.type = "Edge";
 		browser.no = 2;
 		browser.ver = isEdge ? agent.match(/edge\/([\d.]+)/)[1] : agent.match(/edg\/([\d.]+)/)[1];
-		return browser;
-	}
-
-	var isIE = (agent.indexOf("msie") > -1);
-	var isIE11 = (agent.indexOf("trident") > -1);
-	if(isIE || isIE11)
-	{
-		browser.type = "IE";
-		browser.no = 18;
-		browser.ver = isIE ? agent.match(/msie ([\d.]+)/)[1] : 11;
 		return browser;
 	}
 	
@@ -231,12 +237,13 @@ function getBrowser()
 		return browser;
 	}
 	
-	var isWechat = (agent.indexOf("micromessenger") > -1);
-	if(isWechat)
+	var isIE = (agent.indexOf("msie") > -1);
+	var isIE11 = (agent.indexOf("trident") > -1);
+	if(isIE || isIE11)
 	{
-		browser.type = "Wechat";
-		browser.no = 4;
-		browser.ver = agent.match(/micromessenger\/([\d.]+)/)[1];
+		browser.type = "IE";
+		browser.no = 18;
+		browser.ver = isIE ? agent.match(/msie ([\d.]+)/)[1] : 11;
 		return browser;
 	}
 	
