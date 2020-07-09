@@ -7,13 +7,13 @@ function(_, _, $) {
 
 // Module Perfundo
 
-function ShowCer(img, caption)
+function ShowCer(id, caption)
 {
-	var imglnk = 'assets/img/project-' + img + '.png';
+	var imglnk = domain + '/award/index.php?action=get&id=' + id;
 	$('.perfundo__image').css("background-image","url(" + imglnk + ")"); 
 	$('.perfundo__caption').text(caption);
 }
-
+/*
 function workExp()
 {
 	var workexp = $('.latest').eq(0).find('.perfundo__link');
@@ -25,14 +25,14 @@ function workExp()
 		});
     });
 }
-/*
+*/
 function toDate(date)
 {
 	var basic = date.toString();
 	basic = basic.substr(0, basic.length - 3);
 	return basic.replace("-", ".");
 }
-
+/*
 function up(x, y)
 {
 	var date1 = new Date(x.date);
@@ -40,8 +40,8 @@ function up(x, y)
 	
 	return (date1.getTime() < date2.getTime()) ? 1 : -1;
 }
-
-function loadCers(title, place, date, lnk, photo, descript)
+*/
+function loadCers(title, place, date, lnk)
 {
 	var institute = place;
 	
@@ -61,50 +61,50 @@ function loadCers(title, place, date, lnk, photo, descript)
 
 function getCers()
 {
-	
-	//$.ajaxSettings.async = false;	
+		
 	$.ajax({
-  		url: domain + "/api/award/index.php",
-  		data: {"lg":(isEn?"en":"cn")},  
-  		dataType: "json",
-  		success: function(data){
-			
-			data.sort(up);
+  		url: domain + "/award/index.php",
+		type  :	'GET',
+		async :	false,
+  		data: {
+			"lg" : (isEn ? "en" : "cn")
+		},  
+  		dataType: "json", 
+  		success: function(data)
+		{
 			var condiv = $('.education').eq(1).find('.content').eq(0);
 			
-			$.each(data, function(i, item)
+			$.each(data.data, function(i, item)
 			{
-				var divitem;
+				var divitem = loadCers(
+					isEn ? item.title : item.ctitle, 
+					isEn ? item.institute : item.cinstitute, 
+					item.date, 
+					isEn ? item.url : item.curl
+				);
 				
-				if(isEn)
-				{
-					divitem = loadCers(item.title, item.place, item.date, item.link);
-					condiv.append(divitem);
-					condiv.find('.perfundo__link').eq(i).click(function(e) {
-						ShowCer(item.photo, item.descript);
-					});
-				}
-				else
-				{
-					divitem = loadCers(item.titlezh, item.placezh, item.date, item.linkzh);
-					condiv.append(divitem);
-					condiv.find('.perfundo__link').eq(i).click(function(e) {
-						ShowCer(item.photo, item.descriptzh);
-					});
-				}
+				condiv.append(divitem);
+				condiv.find('.perfundo__link').eq(i).click(function(e) {
+					ShowCer(item.id, isEn ? item.description : item.cdescription);
+				});
 				
-			})
+			});
+			
+			console.log('Awards ready!');
+		},
+		error: function(data, type, err)
+		{
+			console.log('Getting failed: ' + data.status);
+			console.log('Error type: ' + type);
+			console.log('Error: ' + err);
 		}
+		
 	});		
 }
 
-getCers();
-*/
-
 $(function(){
-	workExp();
+	getCers();
 });
-//console.log('Perfundo ready!');
 
 // End of Module Perfundo
 

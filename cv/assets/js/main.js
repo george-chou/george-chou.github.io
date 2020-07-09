@@ -40,9 +40,9 @@ function LoadQRC()
 	}
 	else
 	{
-		$(".qrCode").show();
 		$(".qrCode").hover(function(e) { $("#qr").fadeIn(200); });
 		$(".qrCode").mouseleave(function(e) { $("#qr").fadeOut(200); });
+		$(".qrCode").show();
 	}
 }
 
