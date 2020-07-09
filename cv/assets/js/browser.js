@@ -66,18 +66,16 @@ function getOS()
 	var agent = navigator.userAgent.toLowerCase(); 
 	
 	var os = {
-		type : (device.os).toLowerCase(),
+		type : device.os.toLowerCase(),
 		no 	 : -1,
 		ver  : -1
 	};
 	
 	if(os.type !== "unknown")
 	{				
-		if(os.type == "ios")
+		if(device.ios())
 		{
-			var sys = getParenthesesStr(agent).toLowerCase();
-			
-			if(sys.indexOf("iphone") > -1)
+			if(device.iphone())
 			{ 
 				os.type = "iPhone/IOS";
 				os.no = ParseOS(os.type);
@@ -85,15 +83,7 @@ function getOS()
 				return os;
 			}
 			
-			if(sys.indexOf("ipad") > -1)
-			{
-				 os.type = "iPad/IOS";
-				 os.no = ParseOS(os.type);
-				 os.ver = agent.match(/os ([\d_]+)/)[1].replace(/_/g, '.');
-				 return os;
-			}
-			
-			if(sys.indexOf("ipod") > -1) 
+			if(device.ipod()) 
 			{
 				os.type = "iPod/IOS";
 				os.no = ParseOS(os.type);
@@ -101,17 +91,26 @@ function getOS()
 				return os;
 			}
 			
+			var sys = getParenthesesStr(agent).toLowerCase();
 			if(sys.indexOf("macintosh") > -1)
-			{
+			{				
 				os.type = "iPad/IOS";
 				os.no = ParseOS(os.type);
 				os.ver = sys.match(/intel mac os x ([\d_]+)/)[1].replace(/_/g, '.');
 				return os;
-			} 
+			}
+			
+			if(device.ipad())
+			{
+				 os.type = "iPad/IOS";
+				 os.no = ParseOS(os.type);
+				 os.ver = agent.match(/os ([\d_]+)/)[1].replace(/_/g, '.');
+				 return os;
+			}
 		}
-		else if(os.type == "windows")
+		else if(device.windows())
 		{
-			if(agent.indexOf("windows phone") > -1)
+			if(device.windowsPhone())
 			{
 				os.type = "Windows Phone";
 				os.no = ParseOS(os.type);
@@ -120,13 +119,13 @@ function getOS()
 			else
 			{
 				os.type = "Windows";
-				os.no = ParseOS(os.type + " " + ParseWinVer(os.ver));
 				os.ver = agent.match(/windows nt ([\d.]+)/)[1];
+				os.no = ParseOS(os.type + " " + ParseWinVer(os.ver));
 			}			
 			
 			return os;
 		}
-		else if(os.type == "android")
+		else if(device.android())
 		{
 			os.type = "Android";
 			os.no = ParseOS(os.type);
@@ -159,7 +158,6 @@ function getOS()
 	os.type = UpperFirstLetter(os.type);
 	return os;
 }
-
 
 function getBrowser()
 {

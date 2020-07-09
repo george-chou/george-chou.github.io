@@ -1,12 +1,11 @@
-﻿requirejs([
-	'jquery', 
+﻿requirejs([ 
 	'browser', 
 	'core', 
 	'maps', 
 	'worldlow', 
 	'animated'
 ], 
-function($, Browser, am4core, am4maps, am4geodata_worldLow, am4themes_animated){
+function(Browser, am4core, am4maps, am4geodata_worldLow, am4themes_animated){
 
 //Module Visitormap
 
@@ -34,7 +33,7 @@ function mInfo(latitude, longitude, IP, current)
 	}
 	else
 	{
-		this.url = 'https://www.google.com/maps/place/' + latitude + ',' + longitude;
+		this.url = '//www.google.com/maps/place/' + latitude + ',' + longitude;
 	}
 	
 	this.current = current;
@@ -284,9 +283,9 @@ function LoadVisitors(recent, count)
 }
 
 $(function(){
-var rec = getCoord(3);
-DrawMap(rec.markers);
-LoadVisitors(rec.recent, rec.count);
+	var rec = getCoord(3);
+	DrawMap(rec.markers);
+	LoadVisitors(rec.recent, rec.count);
 });
 // End of Module Visitormap
 

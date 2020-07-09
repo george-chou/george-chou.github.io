@@ -4,7 +4,7 @@ requirejs(['jquery'], function($) {
 
 function loadCodingMusic(sid, sname, singer)
 {
-	var lnk = "https://y.qq.com/n/yqq/song/" + sid + "_num.html";
+	var lnk = "//y.qq.com/n/yqq/song/" + sid + "_num.html";
 	var li = '<li><i class="fa fa-headphones"></i> <a href="' + lnk;
 	li += '" target="_blank">' + sname + ' - ' + singer + '</a></li>';
 	$('.list-unstyled').eq(1).append(li);
@@ -37,7 +37,7 @@ function getSonglist()
 }
 
 $(function(){
-getSonglist();
+	getSonglist();
 });
 // End of Module Codemusic
 

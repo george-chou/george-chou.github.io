@@ -3,10 +3,9 @@ requirejs([
 	'css!//cdn.bootcdn.net/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css', 
 	'css!../css/styles.css',
 	'jquery',
-	'device',
 	'browser'
 ],
-function(_, _, _, $, device, Browser) {
+function(_, _, _, $, Browser) {
 
 // Main Module
 
@@ -21,7 +20,7 @@ function preLoad()
 	if($.support.leadingWhitespace)
 	{
 		//$("html").show();
-		$("html").css('visibility', 'visible');
+		//$("html").css('visibility', 'visible');
 		
 		if(notCompatible()) 
 		{
@@ -88,15 +87,12 @@ function LoadToTop()
 	});	
 }
 
-window.onload = function()
-{
-
-preLoad();
-LoadQRC();
-LoadToTop();
-LoadSafeLink();
-
-}
+$(function(){
+	preLoad();
+	LoadQRC();
+	LoadToTop();
+	LoadSafeLink();
+});
 
 // End of Main Module
 

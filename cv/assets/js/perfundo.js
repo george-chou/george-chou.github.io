@@ -1,5 +1,5 @@
 requirejs([
-	'css!https://cdn.bootcdn.net/ajax/libs/perfundo/4.0.4/perfundo.with-icons.min.css',
+	'css!//cdn.bootcdn.net/ajax/libs/perfundo/4.0.4/perfundo.with-icons.min.css',
 	'css!../css/perfundo.css',
 	'jquery'
 ], 
@@ -102,7 +102,7 @@ getCers();
 */
 
 $(function(){
-workExp();
+	workExp();
 });
 //console.log('Perfundo ready!');
 
