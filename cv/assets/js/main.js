@@ -1,6 +1,6 @@
 requirejs([
-	'css!https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css', 
-	'css!https://cdn.bootcdn.net/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css', 
+	'css!//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css', 
+	'css!//cdn.bootcdn.net/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css', 
 	'css!../css/styles.css',
 	'jquery',
 	'device',
