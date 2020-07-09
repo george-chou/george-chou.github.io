@@ -19,8 +19,7 @@ function preLoad()
 {
 	if($.support.leadingWhitespace)
 	{
-		//$("html").show();
-		//$("html").css('visibility', 'visible');
+		$("html").css('visibility', 'visible');
 		
 		if(notCompatible()) 
 		{

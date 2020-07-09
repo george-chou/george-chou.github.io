@@ -1,4 +1,4 @@
-var domain = "https://georgechou21.asuscomm.com:4443/mybackend";
+var domain = "//georgechou21.asuscomm.com:4443/mybackend";
 var isEn = !(document.location.href.indexOf("-cn.html") > -1);
 
 requirejs.config({
@@ -11,8 +11,8 @@ requirejs.config({
 	paths : {
 		'jquery'   : '//cdn.bootcdn.net/ajax/libs/jquery/1.11.2/jquery.min',
 		'device'   : '//unpkg.com/current-device/umd/current-device.min',		
-		'mustache' : '//cdn.bootcdn.net/ajax/libs/mustache.js/4.0.1/mustache.min',
-		'github'   : (isEn ? 'github-activity-0.1.1.min' : 'github-activity-0.1.1-cn.min'),	
+		//'mustache' : '//cdn.bootcdn.net/ajax/libs/mustache.js/4.0.1/mustache.min',
+		//'github'   : (isEn ? 'github-activity-0.1.1.min' : 'github-activity-0.1.1-cn.min'),	
 		'browser'  : 'browser',
 		'core'	   : 'core',
 		'maps'	   : 'maps',
@@ -29,14 +29,14 @@ requirejs.config({
 			],
 			exports : 'Browser'
 		},
-		'github' : {
+		/*'github' : {
 			deps : [
 				'css!//cdn.bootcdn.net/ajax/libs/octicons/6.0.1/octicons.min.css',
 				'css!../css/github-activity-0.1.1.min.css',
 				'mustache'
 			],
 			exports : 'GitHubActivity'
-		},
+		},*/
 		'core' : {
 			deps	: ['jquery'],
 			exports : 'am4core'
