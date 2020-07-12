@@ -2,13 +2,23 @@ requirejs(['jquery'], function($) {
 
 // Module MyInfo
 
+function splitP(p, text)
+{ 
+	var splitted = text.split(/[\n]/);
+	for(var i = 0 ; i < splitted.length ; i++)
+	{
+		p.append(splitted[i]);
+		if(i < splitted.length - 1) p.append('<br>');
+	}
+}
+
 function loadMyInfo(data)
 {
 	$('.header img').attr('alt', isEn ? data.first + ' ' + data.last : data.clast + data.cfirst);
 	$('.header h1').text(isEn ? data.first + ' ' + data.last : data.clast + data.cfirst);
 	$('.header h2').text(isEn ? data.job : data.cjob);
 	$('.btn-cta-primary').attr('href', 'mailto:' + data.email);
-	$('section[class="about section"] p').text(isEn ? data.about : data.cabout);
+	splitP($('section[class="about section"] p'), isEn ? data.about : data.cabout);
 	
 	$('meta[name=description]').attr('content', isEn ? "Welcome to " + data.first + ' ' + data.last + "'s Page of CV" : "欢迎浏览" + data.clast + data.cfirst + "的简历");
 	$('meta[name=author]').attr('content', isEn ? data.first : data.cfirst);
