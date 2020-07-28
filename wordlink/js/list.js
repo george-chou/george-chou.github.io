@@ -7,7 +7,7 @@ function wordlist(ord, list){
 	
 	var k = 0;
 	var domain = "https://georgechou21.asuscomm.com:4443";
-	var jurl = domain + "/wordlist/index.php?list=" + list;
+	var jurl = domain + "/mybackend/wordlist/index.php?list=" + list;
 	
 	$.ajaxSettings.async = false; 
 	$.getJSON(jurl, function (data){
