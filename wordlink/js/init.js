@@ -24,7 +24,7 @@ function porp(x, y)
 function loadUnits(domain)
 {
 	var count = 0;
-	var jurl = domain + "/wordlist/index.php";
+	var jurl = domain + "/mybackend/wordlist/index.php";
 	
 	$.ajaxSettings.async = false;
 	$.getJSON(jurl, function (data)
